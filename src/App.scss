@@ -1,0 +1,15 @@
+@import "./styles/Common.scss";
+
+.container {
+  min-height: 100vh;
+  @extend %flex-center;
+  background-color: var(--bg-color);
+}
+
+
+
+@media (max-width: 576px) {
+  .container {
+      padding: 4.25rem 1rem 1rem;
+  }
+}

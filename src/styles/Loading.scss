@@ -1,0 +1,42 @@
+@import "./Common.scss";
+
+.loading {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @extend %flex-center;
+  background-color: var(--bg-color);
+
+  .loader {
+    width: fit-content;
+    letter-spacing: 0.25rem;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    padding-bottom: 0.5rem;
+    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+    animation: l2 2s linear infinite;
+  }
+
+  .loader:before {
+    content: "Loading...";
+  }
+
+  @keyframes l2 {
+    to {
+      background-size: 100% 3px;
+    }
+  }
+}
+
+@keyframes l4 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
+
+@keyframes l2 {
+  to {
+    background-size: 100% 3px;
+  }
+}

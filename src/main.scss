@@ -1,0 +1,38 @@
+:root {
+  --bg-color: #F5F7FB;
+  --primary-color: #293264;
+  --btn-color: #4d5b9e;
+  --black-t: rgba(0, 0, 0, 0.5);
+  --box-shadow:  0 0 0.5rem var(--black-t);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, p {
+  color: var(--primary-color);
+}
+
+// Utilities
+.btn {
+  color: white;
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding-block: 10px;
+  cursor: pointer;
+}
+
+.btn:hover, .ans-btn:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.btn:active, .ans-btn:active {
+  transform: scale(0.95);
+}

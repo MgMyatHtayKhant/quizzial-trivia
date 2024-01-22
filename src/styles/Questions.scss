@@ -1,0 +1,45 @@
+@import "./Common.scss";
+
+.questions {
+    .question {
+        border-bottom: 1px solid  var(--black-t);
+        padding-bottom: 0.75rem;
+        margin-bottom: 1rem;
+
+        .description {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+       
+        .answers {
+            display: flex;
+            flex-flow: row wrap;
+            column-gap: clamp(0.5rem, 2vw, 1.5rem);
+            row-gap: 0.25rem;
+
+            .ans-btn {
+                min-width: 100px;
+                width: max-content;
+                border: 1px solid var(--primary-color);
+                border-radius: 0.75rem;
+                background-color: transparent;
+                padding: clamp(0.25rem, 1vw, 0.5rem)
+                0.5rem;
+                font-weight: 600;
+                font-size: clamp(0.75rem , 1.5vw, 1rem);
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    .q-btns {
+        @extend %flex-center;
+
+        .q-btn {
+            width: clamp(80px, 100%, 140px);
+            font-size: clamp(14px, 1.5vw, 1rem);
+        }
+    }
+}
