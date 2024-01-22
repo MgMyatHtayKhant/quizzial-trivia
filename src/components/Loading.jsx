@@ -1,8 +1,13 @@
 import "../styles/Loading.scss"
 
-const Loading = () => {
+const Loading = (props) => {
+
+  const styles = {
+    display: props.loading ? "flex" : "none",
+  }
+
   return (
-    <div className="loading">
+    <div style={styles} className="loading">
          <div className="loader"></div>
     </div>
   )
