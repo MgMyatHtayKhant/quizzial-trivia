@@ -29,7 +29,7 @@
                 padding: clamp(0.25rem, 1vw, 0.5rem)
                 0.5rem;
                 font-weight: 600;
-                font-size: clamp(0.75rem , 1.5vw, 1rem);
+                font-size: clamp(1rem , 1.5vw, 1.25rem);
                 cursor: pointer;
             }
 
@@ -54,14 +54,15 @@
 
     .q-btns {
         @extend %flex-center;
-        column-gap: clamp(0.5rem, 2vw, 1.5rem);
+        column-gap: clamp(0.5rem, 3vw, 1.5rem);
 
         .score-description {
-            font-size: clamp(0.75rem, 3vw, 1rem);
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            font-weight: 600;
         }
         .q-btn {
-            width: clamp(80px, 20vw, 180px);
-            font-size: clamp(0.75rem, 1.5vw, 1rem);
+            width: clamp(90px, 20vw, 180px);
+            font-size: clamp(1rem, 3vw, 1.25rem);
         }
     }
 }
