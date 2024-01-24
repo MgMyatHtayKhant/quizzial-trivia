@@ -1,6 +1,6 @@
 import "../styles/Questions.scss"
 
-
+/* eslint-disable react/prop-types */
 function Questions(props) {
     return (
        <div className="questions">
