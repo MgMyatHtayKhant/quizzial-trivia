@@ -1,0 +1,7 @@
+@import "./styles/Common.scss";
+
+.container {
+  min-height: 100vh;
+  @extend %flex-center;
+  background-color: var(--bg-color);
+}
