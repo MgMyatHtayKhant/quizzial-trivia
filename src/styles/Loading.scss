@@ -21,18 +21,6 @@
   .loader:before {
     content: "Loading...";
   }
-
-  @keyframes l2 {
-    to {
-      background-size: 100% 3px;
-    }
-  }
-}
-
-@keyframes l4 {
-  to {
-    clip-path: inset(0 -1ch 0 0);
-  }
 }
 
 @keyframes l2 {

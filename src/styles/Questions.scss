@@ -1,7 +1,7 @@
 @import "./Common.scss";
 
 .questions {
-    padding: 4.25rem 1rem 1rem;
+    padding: 2rem 1rem 1rem;
 
     .question {
         border-bottom: 1px solid  var(--black-t);
@@ -21,27 +21,57 @@
             row-gap: 0.5rem;
 
             .ans-btn {
+                color: var(--primary-color);
                 min-width: 100px;
-                width: max-content;
                 border: 2px solid var(--primary-color);
                 border-radius: 0.75rem;
                 background-color: transparent;
                 padding: clamp(0.25rem, 1vw, 0.5rem)
                 0.5rem;
                 font-weight: 600;
-                font-size: clamp(1rem , 1.5vw, 1.25rem);
+                font-size: clamp(0.75rem , 1.5vw, 1rem);
                 cursor: pointer;
             }
 
+            .ans-btn.selected {
+                border: none;
+                background-color: lightgray;
+                opacity: 0.8
+            }
+
+            .ans-btn.corrected {
+                border: none;
+                background-color: lightgreen
+            }
+
+            .ans-btn.incorrected {
+                border: none;
+                background-color: lightcoral;
+                opacity: 0.5;
+            }
         }
     }
 
     .q-btns {
         @extend %flex-center;
+        column-gap: clamp(0.5rem, 2vw, 1.5rem);
 
+        .score-description {
+            font-size: clamp(0.75rem, 3vw, 1rem);
+        }
         .q-btn {
-            width: clamp(80px, 50%, 180px);
-            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            width: clamp(80px, 20vw, 180px);
+            font-size: clamp(0.75rem, 1.5vw, 1rem);
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .questions {
+        .q-btns {
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 0.5rem;
         }
     }
 }
